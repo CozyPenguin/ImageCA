@@ -1,0 +1,14 @@
+mono: none
+dist: xenial
+addons:
+ snaps:
+ - name: dotnet-sdk
+   confinement: classic
+   channel: latest/beta
+sudo: required
+language: csharp
+git:
+ depth: 5
+script:
+ - sudo snap alias dotnet-sdk.dotnet dotnet
+ - dotnet restore
