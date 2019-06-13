@@ -13,5 +13,5 @@ script:
  - sudo snap alias dotnet-sdk.dotnet dotnet
  - sudo snap list --all
  - dotnet --version
- - dotnet build ImageCA
+ - dotnet build ImageCA.sln
  - dotnet restore
