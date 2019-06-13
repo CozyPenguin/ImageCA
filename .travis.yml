@@ -11,7 +11,4 @@ git:
  depth: 5
 script:
  - sudo snap alias dotnet-sdk.dotnet dotnet
- - sudo snap list --all
- - dotnet --version
- - dotnet build ImageCA.sln
- - dotnet restore
+ - dotnet build ImageCA

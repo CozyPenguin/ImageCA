@@ -1,9 +1,10 @@
 # ImageCA
 
-[![Build Status](https://travis-ci.com/CozyPenguin/ImageCA.svg?token=GiauybMpp5kj2BMEqaiS&branch=develop)](https://travis-ci.com/CozyPenguin/ImageCA)
+[![Build Status](https://travis-ci.com/CozyPenguin/ImageCA.svg?branch=master)](https://travis-ci.com/CozyPenguin/ImageCA)
 
 ## Introduction
- progress software for analyzing image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<http://www.lab2venture.de/>).
+
+Work in progress software for analyzing image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<http://www.lab2venture.de/>).
 
 ## Installation
 
