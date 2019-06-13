@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCA", "ImageCA\ImageCA.csproj", "{48D5D9E6-5E32-4341-88BE-B43FBC55F21F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCACore", "ImageCACore\ImageCACore.csproj", "{DCCB2B9E-6115-4248-AFB0-1DDCC4E40407}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2D0BDA8E-BBB9-451D-BAA8-981A1A2FCA38} = {2D0BDA8E-BBB9-451D-BAA8-981A1A2FCA38}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCAForms", "ImageCAForms\ImageCAForms.csproj", "{2D0BDA8E-BBB9-451D-BAA8-981A1A2FCA38}"
 EndProject

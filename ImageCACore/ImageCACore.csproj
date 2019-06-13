@@ -8,11 +8,12 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>ImageCACore</AssemblyName>
     <RootNamespace>ImageCA.Forms</RootNamespace>
-    <StartupObject></StartupObject>
+    <StartupObject>ImageCA.Forms.Program</StartupObject>
     <ApplicationIcon></ApplicationIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Authors>Carl Schierig</Authors>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
