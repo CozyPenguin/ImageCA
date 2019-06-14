@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Work in progress software for analyzing image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<http://www.lab2venture.de/>).
+ImageCA is a work in progress library used to analyze image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<http://www.lab2venture.de/>).
 
 ## Installation
 
@@ -12,13 +12,23 @@ Currently there are no prebuilt binaries. If you want to build the project from 
 
 ## Features
 
-**These are currently not existent and describe the project when it's finished!**
+**the project is not finished yet, this part describes the project when it's finished!**
 
-ImageCA provides a way to analyse one or several images. It is capable of extracting a colour from one or several points in the image. These colours can be processed separately or be combined into a single colour, e.g. to get the average colour of a probe.
+ImageCA provides a way to analyse one or several images. It is capable of extracting a colour from one or several points in the image. These colours can be processed separately or be combined into a single color, e.g. to get the average color of a probe. The library also provides vectors and in the future, ImageCA will be capable of performing several render-oriented operations. Additionally there will be other colorspaces and better conversion support. 
+
+## Roadmap
+
+After we've finished the vectors, we will focus on prebuilt binaries and a nuget package. Our roadmap is:
+
+version | roadmap
+------- | -------
+`version 0.2` | finish vectors and xml documentation, log messages from all classes
+`version 0.3` | add CIELAB colorspace and all conversion algorithms
+`version 0.4` | better image loading and processing, support for multiple images
 
 ## Credits
 
-All contributors are found in the [CONTRIBUTORS.md](CONTRIBUTORS.md).
+All contributors can be found in the [CONTRIBUTORS.md](CONTRIBUTORS.md). 
 
 ## Resources
 
