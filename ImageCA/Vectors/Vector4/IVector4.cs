@@ -1,7 +1,6 @@
 ﻿namespace ImageCA.Vectors
 {
-    interface IVector
+    interface IVector4 : IVector
     {
-
     }
 }

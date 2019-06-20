@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ImageCA.Vectors
+﻿namespace ImageCA.Vectors
 {
     interface IVector3 : IVector
     {
