@@ -12,13 +12,16 @@ namespace ImageCA.Colors
         private float b;
 
 
-        public ColorRGB(byte R, byte G, byte B)
+        public ColorRGB(float R, float G, float B)
         {
             r = R;
             g = G;
             b = B;
         }
 
+        /// <summary>
+        /// The red value, between 0 and 255
+        /// </summary>
         public float R
         {
             get
@@ -31,6 +34,10 @@ namespace ImageCA.Colors
                 else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
             }
         }
+
+        /// <summary>
+        /// The green value, between 0 and 255
+        /// </summary>
         public float G
         {
             get
@@ -43,6 +50,10 @@ namespace ImageCA.Colors
                 else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
             }
         }
+
+        /// <summary>
+        /// The blue value, between 0 and 255
+        /// </summary>
         public float B
         {
             get

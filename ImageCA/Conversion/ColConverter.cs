@@ -3,9 +3,16 @@ using ImageCA.Logging;
 
 namespace ImageCA.Colors
 {
+    /// <summary>
+    /// Convert colors from one colorspace to another
+    /// </summary>
     public static class ColConverter
     {
-
+        /// <summary>
+        /// Convert a color to HSV
+        /// </summary>
+        /// <param name="inputColor">The input color, an RGB color</param>
+        /// <returns></returns>
         public static ColorHSV ToHSV(ColorRGB inputColor)
         {
             Logger.Log("Color processing RGB -> HSV started.", LogLevel.Info);

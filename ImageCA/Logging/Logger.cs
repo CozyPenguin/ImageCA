@@ -50,6 +50,10 @@ namespace ImageCA.Logging
             fLogger.Log(logText, logLevel);
         }
 
+        /// <summary>
+        /// Close the log properly
+        /// </summary>
+        /// <param name="CloseReason">why the logger is being stopped</param>
         public static void EndLog(string CloseReason)
         {
             fLogger.EndLog(CloseReason);
