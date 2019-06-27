@@ -9,15 +9,15 @@
         /// <summary>
         /// the first value
         /// </summary>
-        public int a { get; set; }
+        public double a { get; set; }
         /// <summary>
         /// the second value
         /// </summary>
-        public int b { get; set; }
+        public double b { get; set; }
         /// <summary>
         /// the third value
         /// </summary>
-        public int c { get; set; }
+        public double c { get; set; }
 
         /// <summary>
         /// Instantiates a new Vector3 with the given values
@@ -52,6 +52,32 @@
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
         public Vector3d(short a, short b, short c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        /// <summary>
+        /// Instantiates a new Vector3 with the given values
+        /// </summary>
+        /// <param name="a">the first value</param>
+        /// <param name="b">the second value</param>
+        /// <param name="c">the third value</param>
+        public Vector3d(float a, float b, float c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        /// <summary>
+        /// Instantiates a new Vector3 with the given values
+        /// </summary>
+        /// <param name="a">the first value</param>
+        /// <param name="b">the second value</param>
+        /// <param name="c">the third value</param>
+        public Vector3d(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
@@ -112,9 +138,9 @@
         /// </summary>
         /// <param name="d">the fourth parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
-        public Vector4 ToVector4Beginning(float d)
+        public Vector4d ToVector4Beginning(double d)
         {
-            Vector4 vector = new Vector4(a, b, c, d);
+            Vector4d vector = new Vector4d(a, b, c, d);
             return (vector);
         }
 
@@ -125,9 +151,9 @@
         /// <param name="a">the first parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
 
-        public Vector4 ToVector4End(float a)
+        public Vector4d ToVector4End(double a)
         {
-            Vector4 vector = new Vector4(a, this.a, b, c);
+            Vector4d vector = new Vector4d(a, this.a, b, c);
             return (vector);
         }
 

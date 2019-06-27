@@ -112,9 +112,9 @@
         /// </summary>
         /// <param name="d">the fourth parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
-        public Vector4 ToVector4Beginning(float d)
+        public Vector4f ToVector4Beginning(float d)
         {
-            Vector4 vector = new Vector4(a, b, c, d);
+            Vector4f vector = new Vector4f(a, b, c, d);
             return (vector);
         }
 
@@ -125,9 +125,9 @@
         /// <param name="a">the first parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
 
-        public Vector4 ToVector4End(float a)
+        public Vector4f ToVector4End(float a)
         {
-            Vector4 vector = new Vector4(a, this.a, b, c);
+            Vector4f vector = new Vector4f(a, this.a, b, c);
             return (vector);
         }
 
