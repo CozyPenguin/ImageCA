@@ -55,6 +55,9 @@ namespace ImageCA.Logging
                 case LogLevel.Debug:
                     writer.Write("[Debug] ");
                     break;
+                case LogLevel.Info:
+                    writer.Write("[Info] ");
+                    break;
                 case LogLevel.Warn:
                     writer.Write("[Warn] ");
                     break;

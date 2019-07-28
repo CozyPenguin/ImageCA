@@ -11,14 +11,22 @@ namespace ImageCA.Colors
         private float g;
         private float b;
 
-
-        public ColorRGB(byte R, byte G, byte B)
+        /// <summary>
+        /// initialize a new ColorRGB with the given values
+        /// </summary>
+        /// <param name="r">the red value ranging from 0 to 255</param>
+        /// <param name="g">the green value ranging from 0 to 255</param>
+        /// <param name="b">the blue value ranging from 0 to 255</param>
+        public ColorRGB(float r, float g, float b)
         {
-            r = R;
-            g = G;
-            b = B;
+            this.r = r;
+            this.g = g;
+            this.b = b;
         }
 
+        /// <summary>
+        /// The red value, between 0 and 255
+        /// </summary>
         public float R
         {
             get
@@ -31,6 +39,10 @@ namespace ImageCA.Colors
                 else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
             }
         }
+
+        /// <summary>
+        /// The green value, between 0 and 255
+        /// </summary>
         public float G
         {
             get
@@ -43,6 +55,10 @@ namespace ImageCA.Colors
                 else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
             }
         }
+
+        /// <summary>
+        /// The blue value, between 0 and 255
+        /// </summary>
         public float B
         {
             get

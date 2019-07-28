@@ -4,20 +4,20 @@
     /// A vector containing 3 int values
     /// </summary>
     [System.Serializable]
-    public struct Vector3i : IVector3
+    public struct Vector3d : IVector3
     {
         /// <summary>
         /// the first value
         /// </summary>
-        public int a { get; set; }
+        public double a { get; set; }
         /// <summary>
         /// the second value
         /// </summary>
-        public int b { get; set; }
+        public double b { get; set; }
         /// <summary>
         /// the third value
         /// </summary>
-        public int c { get; set; }
+        public double c { get; set; }
 
         /// <summary>
         /// Instantiates a new Vector3 with the given values
@@ -25,7 +25,7 @@
         /// <param name="a">the first value</param>
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
-        public Vector3i(int a, int b, int c)
+        public Vector3d(int a, int b, int c)
         {
             this.a = a;
             this.b = b;
@@ -38,7 +38,7 @@
         /// <param name="a">the first value</param>
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
-        public Vector3i(byte a, byte b, byte c)
+        public Vector3d(byte a, byte b, byte c)
         {
             this.a = a;
             this.b = b;
@@ -51,7 +51,33 @@
         /// <param name="a">the first value</param>
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
-        public Vector3i(short a, short b, short c)
+        public Vector3d(short a, short b, short c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        /// <summary>
+        /// Instantiates a new Vector3 with the given values
+        /// </summary>
+        /// <param name="a">the first value</param>
+        /// <param name="b">the second value</param>
+        /// <param name="c">the third value</param>
+        public Vector3d(float a, float b, float c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        /// <summary>
+        /// Instantiates a new Vector3 with the given values
+        /// </summary>
+        /// <param name="a">the first value</param>
+        /// <param name="b">the second value</param>
+        /// <param name="c">the third value</param>
+        public Vector3d(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
@@ -64,9 +90,9 @@
         /// <param name="a">The first Vector3</param>
         /// <param name="b">The second Vector3</param>
         /// <returns>Returns the arithmetic mean of the vectors</returns>
-        public static Vector3i Average(Vector3i a, Vector3i b)
+        public static Vector3d Average(Vector3d a, Vector3d b)
         {
-            Vector3i c = new Vector3i();
+            Vector3d c = new Vector3d();
             c.a = a.a + b.a / 2;
             c.b = a.b + b.b / 2;
             c.c = a.c + b.c / 2;
@@ -80,9 +106,9 @@
         /// <param name="b">The second Vector3</param>
         /// <param name="c">The third Vector3</param>
         /// <returns>returns the arithmetic mean of the vectors</returns>
-        public static Vector3i Average(Vector3i a, Vector3i b, Vector3i c)
+        public static Vector3d Average(Vector3d a, Vector3d b, Vector3d c)
         {
-            Vector3i d = new Vector3i();
+            Vector3d d = new Vector3d();
             d.a = a.a + b.a + c.a / 3;
             d.b = a.b + b.b + c.b / 3;
             d.c = a.c + b.c + c.c / 3;
@@ -97,9 +123,9 @@
         /// <param name="c">The third Vector3</param>
         /// <param name="d">The fourth Vector3</param>
         /// <returns>returns the arithmetic mean of the vectors</returns>
-        public static Vector3i Average(Vector3i a, Vector3i b, Vector3i c, Vector3i d)
+        public static Vector3d Average(Vector3d a, Vector3d b, Vector3d c, Vector3d d)
         {
-            Vector3i e = new Vector3i();
+            Vector3d e = new Vector3d();
             e.a = a.a + b.a + c.a + d.a / 4;
             e.b = a.b + b.b + c.b + d.b / 4;
             e.c = a.c + b.c + c.c + d.c / 4;
@@ -112,9 +138,9 @@
         /// </summary>
         /// <param name="d">the fourth parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
-        public Vector4i ToVector4Beginning(int d = 0)
+        public Vector4d ToVector4Beginning(double d)
         {
-            Vector4i vector = new Vector4i(a, b, c, d);
+            Vector4d vector = new Vector4d(a, b, c, d);
             return (vector);
         }
 
@@ -125,9 +151,9 @@
         /// <param name="a">the first parameter of the <c>Vector4</c></param>
         /// <returns>the Vector4 of the Vector3</returns>
 
-        public Vector4i ToVector4End(int a = 0)
+        public Vector4d ToVector4End(double a)
         {
-            Vector4i vector = new Vector4i(a, this.a, b, c);
+            Vector4d vector = new Vector4d(a, this.a, b, c);
             return (vector);
         }
 
@@ -147,9 +173,9 @@
         /// <param name="a">the first <c>Vector3</c> to add</param>
         /// <param name="b">the second <c>Vector3</c> to add</param>
         /// <returns>Returns the sum of a and b</returns>
-        public static Vector3i operator +(Vector3i a, Vector3i b)
+        public static Vector3d operator +(Vector3d a, Vector3d b)
         {
-            Vector3i c = new Vector3i();
+            Vector3d c = new Vector3d();
             c.a = a.a + b.a;
             c.b = a.b + b.b;
             c.c = a.c + b.c;
@@ -162,9 +188,9 @@
         /// <param name="a">The <c>Vector3</c> to substract from</param>
         /// <param name="b">The <c>Vector3</c> to substract</param>
         /// <returns>Returns the substraction of a and b</returns>
-        public static Vector3i operator -(Vector3i a, Vector3i b)
+        public static Vector3d operator -(Vector3d a, Vector3d b)
         {
-            Vector3i c = new Vector3i();
+            Vector3d c = new Vector3d();
             c.a = a.a - b.a;
             c.b = a.b - b.b;
             c.c = a.c - b.c;
@@ -177,9 +203,9 @@
         /// <param name="a">The first <c>Vector3</c> to multiply</param>
         /// <param name="b">The second <c>Vector3</c> to multiply</param>
         /// <returns>Returns the product of a and b</returns>
-        public static Vector3i operator *(Vector3i a, Vector3i b)
+        public static Vector3d operator *(Vector3d a, Vector3d b)
         {
-            Vector3i c = new Vector3i();
+            Vector3d c = new Vector3d();
             c.a = a.a * b.a;
             c.b = a.b * b.b;
             c.c = a.c * b.c;
@@ -192,9 +218,9 @@
         /// <param name="a">The first <c>Vector3</c></param>
         /// <param name="b">The <c>Vector3</c> to divide thourght</param>
         /// <returns>Returns the division of a and b</returns>
-        public static Vector3i operator /(Vector3i a, Vector3i b)
+        public static Vector3d operator /(Vector3d a, Vector3d b)
         {
-            Vector3i c = new Vector3i();
+            Vector3d c = new Vector3d();
             c.a = a.a / b.a;
             c.b = a.b / b.b;
             c.c = a.c / b.c;

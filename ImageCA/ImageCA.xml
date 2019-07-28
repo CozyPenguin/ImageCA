@@ -37,6 +37,41 @@
             A color in the RGB colorspace
             </summary>
         </member>
+        <member name="M:ImageCA.Colors.ColorRGB.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            initialize a new ColorRGB with the given values
+            </summary>
+            <param name="r">the red value ranging from 0 to 255</param>
+            <param name="g">the green value ranging from 0 to 255</param>
+            <param name="b">the blue value ranging from 0 to 255</param>
+        </member>
+        <member name="P:ImageCA.Colors.ColorRGB.R">
+            <summary>
+            The red value, between 0 and 255
+            </summary>
+        </member>
+        <member name="P:ImageCA.Colors.ColorRGB.G">
+            <summary>
+            The green value, between 0 and 255
+            </summary>
+        </member>
+        <member name="P:ImageCA.Colors.ColorRGB.B">
+            <summary>
+            The blue value, between 0 and 255
+            </summary>
+        </member>
+        <member name="T:ImageCA.Colors.ColConverter">
+            <summary>
+            Convert colors from one colorspace to another
+            </summary>
+        </member>
+        <member name="M:ImageCA.Colors.ColConverter.ToHSV(ImageCA.Colors.ColorRGB)">
+            <summary>
+            Convert a color to HSV
+            </summary>
+            <param name="inputColor">The input color, an RGB color</param>
+            <returns></returns>
+        </member>
         <member name="T:ImageCA.Logging.FLogger">
             <summary>
             The <c>Logger</c> class writes logs
@@ -68,6 +103,559 @@
             Stops the Logger and writes down time and closing reason
             </summary>
             <param name="CloseReason">The reason the logger closes.</param>
+        </member>
+        <member name="T:ImageCA.Logging.Logger">
+            <summary>
+            logs log messages to the folder %APP-DATA%/Roaming/ImageCA/logs
+            </summary>
+        </member>
+        <member name="M:ImageCA.Logging.Logger.Log(System.String,LogLevel)">
+            <summary>
+            log a single string
+            </summary>
+            <param name="logText">the string to log</param>
+            <param name="logLevel">log level</param>
+        </member>
+        <member name="M:ImageCA.Logging.Logger.Log(System.String[],LogLevel)">
+            <summary>
+            log a string array
+            </summary>
+            <param name="logText">the string array to log</param>
+            <param name="logLevel">log level</param>
+        </member>
+        <member name="M:ImageCA.Logging.Logger.EndLog(System.String)">
+            <summary>
+            Close the log properly
+            </summary>
+            <param name="CloseReason">why the logger is being stopped</param>
+        </member>
+        <member name="T:ImageCA.Vectors.IVector">
+            <summary>
+            a vector
+            </summary>
+        </member>
+        <member name="T:ImageCA.Vectors.IVector2">
+            <summary>
+            a 2-dimensional vector
+            </summary>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector2d">
+            <summary>
+            A vector containing 3 int values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2d.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2d.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.#ctor(System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.#ctor(System.Single,System.Single)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.#ctor(System.Double,System.Double)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.Average(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <returns>Returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.Average(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <param name="c">The third Vector3</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.Average(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <param name="c">The third Vector3</param>
+            <param name="d">The fourth Vector3</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.ToVector4Beginning(System.Double)">
+            <summary>
+            Converts the <c>Vector3</c> to a <c>Vector4</c>
+            <c>Vector3</c> is located at the beginning of <c>Vector4</c>
+            </summary>
+            <param name="c">the fourth parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector3</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.ToVector4End(System.Double)">
+            <summary>
+            Converts the <c>Vector3</c> to a <c>Vector4</c>
+            <c>Vector3</c> is located at the end of <c>Vector4</c>
+            </summary>
+            <param name="a">the first parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector3</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.op_Addition(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            add two <c>Vector3</c> together
+            </summary>
+            <param name="a">the first <c>Vector3</c> to add</param>
+            <param name="b">the second <c>Vector3</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.op_Subtraction(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            subtract a <c>Vector3</c> from another
+            </summary>
+            <param name="a">The <c>Vector3</c> to substract from</param>
+            <param name="b">The <c>Vector3</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.op_Multiply(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            Multiply two <c>Vector3</c>
+            </summary>
+            <param name="a">The first <c>Vector3</c> to multiply</param>
+            <param name="b">The second <c>Vector3</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2d.op_Division(ImageCA.Vectors.Vector2d,ImageCA.Vectors.Vector2d)">
+            <summary>
+            Divide a <c>Vector3</c> through another
+            </summary>
+            <param name="a">The first <c>Vector3</c></param>
+            <param name="b">The <c>Vector3</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector2f">
+            <summary>
+            A vector containing 2 float values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2f.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2f.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.#ctor(System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.#ctor(System.Single,System.Single)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.Average(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <returns>Returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.Average(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <param name="c">The third Vector2</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.Average(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <param name="c">The third Vector2</param>
+            <param name="d">The fourth Vector2</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.ToVector4Beginning(System.Single)">
+            <summary>
+            Converts the <c>Vector2</c> to a <c>Vector4</c>
+            <c>Vector2</c> is located at the beginning of <c>Vector4</c>
+            </summary>
+            <param name="c">the fourth parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector2</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.ToVector4End(System.Single)">
+            <summary>
+            Converts the <c>Vector2</c> to a <c>Vector4</c>
+            <c>Vector2</c> is located at the end of <c>Vector4</c>
+            </summary>
+            <param name="a">the first parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector2</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.op_Addition(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            add two <c>Vector2</c> together
+            </summary>
+            <param name="a">the first <c>Vector2</c> to add</param>
+            <param name="b">the second <c>Vector2</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.op_Subtraction(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            subtract a <c>Vector2</c> from another
+            </summary>
+            <param name="a">The <c>Vector2</c> to substract from</param>
+            <param name="b">The <c>Vector2</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.op_Multiply(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            Multiply two <c>Vector2</c>
+            </summary>
+            <param name="a">The first <c>Vector2</c> to multiply</param>
+            <param name="b">The second <c>Vector2</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2f.op_Division(ImageCA.Vectors.Vector2f,ImageCA.Vectors.Vector2f)">
+            <summary>
+            Divide a <c>Vector2</c> through another
+            </summary>
+            <param name="a">The first <c>Vector2</c></param>
+            <param name="b">The <c>Vector2</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector2i">
+            <summary>
+            A vector containing 2 float values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2i.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector2i.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.#ctor(System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector2 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.Average(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <returns>Returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.Average(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <param name="c">The third Vector2</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.Average(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector2</param>
+            <param name="b">The second Vector2</param>
+            <param name="c">The third Vector2</param>
+            <param name="d">The fourth Vector2</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.ToVector4Beginning(System.Int32)">
+            <summary>
+            Converts the <c>Vector2</c> to a <c>Vector4</c>
+            <c>Vector2</c> is located at the beginning of <c>Vector4</c>
+            </summary>
+            <param name="c">the fourth parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector2</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.ToVector4End(System.Int32)">
+            <summary>
+            Converts the <c>Vector2</c> to a <c>Vector4</c>
+            <c>Vector2</c> is located at the end of <c>Vector4</c>
+            </summary>
+            <param name="a">the first parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector2</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.op_Addition(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            add two <c>Vector2</c> together
+            </summary>
+            <param name="a">the first <c>Vector2</c> to add</param>
+            <param name="b">the second <c>Vector2</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.op_Subtraction(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            subtract a <c>Vector2</c> from another
+            </summary>
+            <param name="a">The <c>Vector2</c> to substract from</param>
+            <param name="b">The <c>Vector2</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.op_Multiply(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            Multiply two <c>Vector2</c>
+            </summary>
+            <param name="a">The first <c>Vector2</c> to multiply</param>
+            <param name="b">The second <c>Vector2</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector2i.op_Division(ImageCA.Vectors.Vector2i,ImageCA.Vectors.Vector2i)">
+            <summary>
+            Divide a <c>Vector2</c> through another
+            </summary>
+            <param name="a">The first <c>Vector2</c></param>
+            <param name="b">The <c>Vector2</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
+        </member>
+        <member name="T:ImageCA.Vectors.IVector3">
+            <summary>
+            a 3-dimensional vector
+            </summary>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector3d">
+            <summary>
+            A vector containing 3 int values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector3d.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector3d.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector3d.c">
+            <summary>
+            the third value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.#ctor(System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Instantiates a new Vector3 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.Average(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <returns>Returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.Average(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <param name="c">The third Vector3</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.Average(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            Returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">The first Vector3</param>
+            <param name="b">The second Vector3</param>
+            <param name="c">The third Vector3</param>
+            <param name="d">The fourth Vector3</param>
+            <returns>returns the arithmetic mean of the vectors</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.ToVector4Beginning(System.Double)">
+            <summary>
+            Converts the <c>Vector3</c> to a <c>Vector4</c>
+            <c>Vector3</c> is located at the beginning of <c>Vector4</c>
+            </summary>
+            <param name="d">the fourth parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector3</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.ToVector4End(System.Double)">
+            <summary>
+            Converts the <c>Vector3</c> to a <c>Vector4</c>
+            <c>Vector3</c> is located at the end of <c>Vector4</c>
+            </summary>
+            <param name="a">the first parameter of the <c>Vector4</c></param>
+            <returns>the Vector4 of the Vector3</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.op_Addition(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            add two <c>Vector3</c> together
+            </summary>
+            <param name="a">the first <c>Vector3</c> to add</param>
+            <param name="b">the second <c>Vector3</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.op_Subtraction(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            subtract a <c>Vector3</c> from another
+            </summary>
+            <param name="a">The <c>Vector3</c> to substract from</param>
+            <param name="b">The <c>Vector3</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.op_Multiply(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            Multiply two <c>Vector3</c>
+            </summary>
+            <param name="a">The first <c>Vector3</c> to multiply</param>
+            <param name="b">The second <c>Vector3</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector3d.op_Division(ImageCA.Vectors.Vector3d,ImageCA.Vectors.Vector3d)">
+            <summary>
+            Divide a <c>Vector3</c> through another
+            </summary>
+            <param name="a">The first <c>Vector3</c></param>
+            <param name="b">The <c>Vector3</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
         </member>
         <member name="T:ImageCA.Vectors.Vector3f">
             <summary>
@@ -273,7 +861,7 @@
             <param name="d">The fourth Vector3</param>
             <returns>returns the arithmetic mean of the vectors</returns>
         </member>
-        <member name="M:ImageCA.Vectors.Vector3i.ToVector4Beginning(System.Single)">
+        <member name="M:ImageCA.Vectors.Vector3i.ToVector4Beginning(System.Int32)">
             <summary>
             Converts the <c>Vector3</c> to a <c>Vector4</c>
             <c>Vector3</c> is located at the beginning of <c>Vector4</c>
@@ -281,7 +869,7 @@
             <param name="d">the fourth parameter of the <c>Vector4</c></param>
             <returns>the Vector4 of the Vector3</returns>
         </member>
-        <member name="M:ImageCA.Vectors.Vector3i.ToVector4End(System.Single)">
+        <member name="M:ImageCA.Vectors.Vector3i.ToVector4End(System.Int32)">
             <summary>
             Converts the <c>Vector3</c> to a <c>Vector4</c>
             <c>Vector3</c> is located at the end of <c>Vector4</c>
@@ -327,12 +915,82 @@
             <param name="b">The <c>Vector3</c> to divide thourght</param>
             <returns>Returns the division of a and b</returns>
         </member>
-        <member name="T:ImageCA.Vector4">
+        <member name="T:ImageCA.Vectors.IVector4">
+            <summary>
+            a 4-dimensional vector
+            </summary>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector4d">
             <summary>
             A vector containing 4 values
             </summary>
         </member>
-        <member name="M:ImageCA.Vector4.Average(ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="P:ImageCA.Vectors.Vector4d.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4d.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4d.c">
+            <summary>
+            the third value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4d.d">
+            <summary>
+            the foruth value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.#ctor(System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4d.Average(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             returns the arithmetic mean of the vectors
             </summary>
@@ -340,7 +998,7 @@
             <param name="b">second Vector4</param>
             <returns></returns>
         </member>
-        <member name="M:ImageCA.Vector4.Average(ImageCA.Vector4,ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.Average(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             returns the arithmetic mean of the vectors
             </summary>
@@ -349,7 +1007,7 @@
             <param name="c">third Vector4</param>
             <returns></returns>
         </member>
-        <member name="M:ImageCA.Vector4.Average(ImageCA.Vector4,ImageCA.Vector4,ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.Average(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             returns the arithmetic mean of the vectors
             </summary>
@@ -359,13 +1017,13 @@
             <param name="d">fourth Vector4</param>
             <returns></returns>
         </member>
-        <member name="M:ImageCA.Vector4.ToString">
+        <member name="M:ImageCA.Vectors.Vector4d.ToString">
             <summary>
             Converts the vector to a string
             </summary>
             <returns>Returns a string of a Vector</returns>
         </member>
-        <member name="M:ImageCA.Vector4.op_Addition(ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.op_Addition(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             add two <c>Vector4</c> together
             </summary>
@@ -373,7 +1031,7 @@
             <param name="b">the second <c>Vector4</c> to add</param>
             <returns>Returns the sum of a and b</returns>
         </member>
-        <member name="M:ImageCA.Vector4.op_Subtraction(ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.op_Subtraction(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             subtract a <c>Vector4</c> from another
             </summary>
@@ -381,7 +1039,7 @@
             <param name="b">The <c>Vector4</c> to substract</param>
             <returns>Returns the substraction of a and b</returns>
         </member>
-        <member name="M:ImageCA.Vector4.op_Multiply(ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.op_Multiply(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
             <summary>
             Multiply two <c>Vector4</c>
             </summary>
@@ -389,7 +1047,250 @@
             <param name="b">The second <c>Vector4</c> to multiply</param>
             <returns>Returns the product of a and b</returns>
         </member>
-        <member name="M:ImageCA.Vector4.op_Division(ImageCA.Vector4,ImageCA.Vector4)">
+        <member name="M:ImageCA.Vectors.Vector4d.op_Division(ImageCA.Vectors.Vector4d,ImageCA.Vectors.Vector4d)">
+            <summary>
+            Divide a <c>Vector4</c> through another
+            </summary>
+            <param name="a">The first <c>Vector4</c></param>
+            <param name="b">The <c>Vector4</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector4f">
+            <summary>
+            A vector containing 4 values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4f.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4f.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4f.c">
+            <summary>
+            the third value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4f.d">
+            <summary>
+            the fourth value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.#ctor(System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.Average(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.Average(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <param name="c">third Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.Average(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <param name="c">third Vector4</param>
+            <param name="d">fourth Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.op_Addition(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            add two <c>Vector4</c> together
+            </summary>
+            <param name="a">the first <c>Vector4</c> to add</param>
+            <param name="b">the second <c>Vector4</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.op_Subtraction(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            subtract a <c>Vector4</c> from another
+            </summary>
+            <param name="a">The <c>Vector4</c> to substract from</param>
+            <param name="b">The <c>Vector4</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.op_Multiply(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            Multiply two <c>Vector4</c>
+            </summary>
+            <param name="a">The first <c>Vector4</c> to multiply</param>
+            <param name="b">The second <c>Vector4</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4f.op_Division(ImageCA.Vectors.Vector4f,ImageCA.Vectors.Vector4f)">
+            <summary>
+            Divide a <c>Vector4</c> through another
+            </summary>
+            <param name="a">The first <c>Vector4</c></param>
+            <param name="b">The <c>Vector4</c> to divide thourght</param>
+            <returns>Returns the division of a and b</returns>
+        </member>
+        <member name="T:ImageCA.Vectors.Vector4i">
+            <summary>
+            A vector containing 4 values
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4i.a">
+            <summary>
+            the first value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4i.b">
+            <summary>
+            the second value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4i.c">
+            <summary>
+            the third value
+            </summary>
+        </member>
+        <member name="P:ImageCA.Vectors.Vector4i.d">
+            <summary>
+            the fourth value
+            </summary>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.#ctor(System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instantiates a new Vector4 with the given values
+            </summary>
+            <param name="a">the first value</param>
+            <param name="b">the second value</param>
+            <param name="c">the third value</param>
+            <param name="d">the fourth value</param>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.Average(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.Average(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <param name="c">third Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.Average(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            returns the arithmetic mean of the vectors
+            </summary>
+            <param name="a">first Vector4</param>
+            <param name="b">second Vector4</param>
+            <param name="c">third Vector4</param>
+            <param name="d">fourth Vector4</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.ToString">
+            <summary>
+            Converts the vector to a string
+            </summary>
+            <returns>Returns a string of a Vector</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.op_Addition(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            add two <c>Vector4</c> together
+            </summary>
+            <param name="a">the first <c>Vector4</c> to add</param>
+            <param name="b">the second <c>Vector4</c> to add</param>
+            <returns>Returns the sum of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.op_Subtraction(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            subtract a <c>Vector4</c> from another
+            </summary>
+            <param name="a">The <c>Vector4</c> to substract from</param>
+            <param name="b">The <c>Vector4</c> to substract</param>
+            <returns>Returns the substraction of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.op_Multiply(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
+            <summary>
+            Multiply two <c>Vector4</c>
+            </summary>
+            <param name="a">The first <c>Vector4</c> to multiply</param>
+            <param name="b">The second <c>Vector4</c> to multiply</param>
+            <returns>Returns the product of a and b</returns>
+        </member>
+        <member name="M:ImageCA.Vectors.Vector4i.op_Division(ImageCA.Vectors.Vector4i,ImageCA.Vectors.Vector4i)">
             <summary>
             Divide a <c>Vector4</c> through another
             </summary>

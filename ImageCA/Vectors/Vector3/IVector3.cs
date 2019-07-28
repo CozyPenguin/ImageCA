@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ImageCA.Vectors
+﻿namespace ImageCA.Vectors
 {
-    interface IVector3 : IVector
+    /// <summary>
+    /// a 3-dimensional vector
+    /// </summary>
+    public interface IVector3 : IVector
     {
-        Vector4 ToVector4Beginning(float d);
-        Vector4 ToVector4End(float a);
-        string ToString();
     }
 }

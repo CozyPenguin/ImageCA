@@ -9,19 +9,26 @@
     <Copyright>(c) 2019 Carl Schierig</Copyright>
     <Authors>Carl Schierig</Authors>
     <Company />
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
     <RepositoryUrl>https://github.com/CozyPenguin/ImageCA</RepositoryUrl>
-    <PackageTags>image,image-analysis,c-sharp</PackageTags>
+    <PackageTags>image,image-analysis,c-sharp,colors</PackageTags>
     <Description>ImageCA provides a way of analysing images and especially colors</Description>
     <PackageId>ImageCA</PackageId>
     <Product>ImageCA</Product>
-    <AssemblyVersion>0.1.1.0</AssemblyVersion>
-    <FileVersion>0.1.1.0</FileVersion>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
     <Win32Resource />
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <PackageReleaseNotes>v0.2.0
+- added 2-,3- and 4-dimensional vectors
+- updated xml documentation
+- more and better log messages</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Schwe\source\repos\ImageCA\ImageCA\ImageCA.xml</DocumentationFile>
+    <DocumentationFile>.\ImageCA.xml</DocumentationFile>
     <Optimize>false</Optimize>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -29,7 +36,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\Schwe\source\repos\ImageCA\ImageCA\ImageCA.xml</DocumentationFile>
+    <DocumentationFile>.\ImageCA.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
