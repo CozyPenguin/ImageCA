@@ -33,7 +33,6 @@ All contributors can be found in the [CONTRIBUTORS.md](CONTRIBUTORS.md).
 
 RGB to HSV conversion algorithm:
 
-- <https://en.wikipedia.org/wiki/HSL_and_HSV#From_RGB>
 - <https://www5.in.tum.de/lehre/vorlesungen/graphik/info/csc/COL_25.htm#topic24>
 
 ## License
