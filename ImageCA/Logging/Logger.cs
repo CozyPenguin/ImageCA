@@ -31,6 +31,9 @@ public enum LogLevel : byte
 
 namespace ImageCA.Logging
 {
+    /// <summary>
+    /// logs log messages to the folder %APP-DATA%/Roaming/ImageCA/logs
+    /// </summary>
     public static class Logger
     {
         private static FLogger fLogger;
@@ -40,11 +43,21 @@ namespace ImageCA.Logging
             fLogger = new FLogger(System.Reflection.Assembly.GetExecutingAssembly().GetName().Name);
         }
 
+        /// <summary>
+        /// log a single string
+        /// </summary>
+        /// <param name="logText">the string to log</param>
+        /// <param name="logLevel">log level</param>
         public static void Log(string logText, LogLevel logLevel)
         {
             fLogger.Log(logText, logLevel);
         }
 
+        /// <summary>
+        /// log a string array
+        /// </summary>
+        /// <param name="logText">the string array to log</param>
+        /// <param name="logLevel">log level</param>
         public static void Log(string[] logText, LogLevel logLevel)
         {
             fLogger.Log(logText, logLevel);

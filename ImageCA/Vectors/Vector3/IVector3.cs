@@ -1,6 +1,9 @@
 ﻿namespace ImageCA.Vectors
 {
-    interface IVector3 : IVector
+    /// <summary>
+    /// a 3-dimensional vector
+    /// </summary>
+    public interface IVector3 : IVector
     {
     }
 }

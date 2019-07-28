@@ -22,7 +22,6 @@ After we've finished the vectors, we will focus on prebuilt binaries and a nuget
 
 version | roadmap
 ------- | -------
-`version 0.2` | finish vectors and xml documentation, log messages from all classes
 `version 0.3` | add CIELAB colorspace and all conversion algorithms
 `version 0.4` | better image loading and processing, support for multiple images
 

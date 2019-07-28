@@ -11,12 +11,17 @@ namespace ImageCA.Colors
         private float g;
         private float b;
 
-
-        public ColorRGB(float R, float G, float B)
+        /// <summary>
+        /// initialize a new ColorRGB with the given values
+        /// </summary>
+        /// <param name="r">the red value ranging from 0 to 255</param>
+        /// <param name="g">the green value ranging from 0 to 255</param>
+        /// <param name="b">the blue value ranging from 0 to 255</param>
+        public ColorRGB(float r, float g, float b)
         {
-            r = R;
-            g = G;
-            b = B;
+            this.r = r;
+            this.g = g;
+            this.b = b;
         }
 
         /// <summary>
