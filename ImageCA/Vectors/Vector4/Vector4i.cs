@@ -5,24 +5,24 @@
     /// A vector containing 4 values
     /// </summary>
     [System.Serializable]
-    public struct Vector4d : IVector4
+    public struct Vector4i : IVector4
     {
         /// <summary>
         /// the first value
         /// </summary>
-        public double a { get; set; }
+        public int a { get; set; }
         /// <summary>
         /// the second value
         /// </summary>
-        public double b { get; set; }
+        public int b { get; set; }
         /// <summary>
         /// the third value
         /// </summary>
-        public double c { get; set; }
+        public int c { get; set; }
         /// <summary>
-        /// the foruth value
+        /// the fourth value
         /// </summary>
-        public double d { get; set; }
+        public int d { get; set; }
 
         /// <summary>
         /// Instantiates a new Vector4 with the given values
@@ -31,7 +31,7 @@
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
         /// <param name="d">the fourth value</param>
-        public Vector4d(byte a, byte b, byte c, byte d)
+        public Vector4i(byte a, byte b, byte c, byte d)
         {
             this.a = a;
             this.b = b;
@@ -46,7 +46,7 @@
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
         /// <param name="d">the fourth value</param>
-        public Vector4d(short a, short b, short c, short d)
+        public Vector4i(short a, short b, short c, short d)
         {
             this.a = a;
             this.b = b;
@@ -61,37 +61,7 @@
         /// <param name="b">the second value</param>
         /// <param name="c">the third value</param>
         /// <param name="d">the fourth value</param>
-        public Vector4d(int a, int b, int c, int d)
-        {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-            this.d = d;
-        }
-
-        /// <summary>
-        /// Instantiates a new Vector4 with the given values
-        /// </summary>
-        /// <param name="a">the first value</param>
-        /// <param name="b">the second value</param>
-        /// <param name="c">the third value</param>
-        /// <param name="d">the fourth value</param>
-        public Vector4d(float a, float b, float c, float d)
-        {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-            this.d = d;
-        }
-
-        /// <summary>
-        /// Instantiates a new Vector4 with the given values
-        /// </summary>
-        /// <param name="a">the first value</param>
-        /// <param name="b">the second value</param>
-        /// <param name="c">the third value</param>
-        /// <param name="d">the fourth value</param>
-        public Vector4d(double a, double b, double c, double d)
+        public Vector4i(int a, int b, int c, int d)
         {
             this.a = a;
             this.b = b;
@@ -105,9 +75,9 @@
         /// <param name="a">first Vector4</param>
         /// <param name="b">second Vector4</param>
         /// <returns></returns>
-        public static Vector4d Average(Vector4d a, Vector4d b)
+        public static Vector4i Average(Vector4i a, Vector4i b)
         {
-            Vector4d c = new Vector4d();
+            Vector4i c = new Vector4i();
             c.a = a.a + b.a / 2;
             c.b = a.b + b.b / 2;
             c.c = a.c + b.c / 2;
@@ -122,9 +92,9 @@
         /// <param name="b">second Vector4</param>
         /// <param name="c">third Vector4</param>
         /// <returns></returns>
-        public static Vector4d Average(Vector4d a, Vector4d b, Vector4d c)
+        public static Vector4i Average(Vector4i a, Vector4i b, Vector4i c)
         {
-            Vector4d d = new Vector4d();
+            Vector4i d = new Vector4i();
             d.a = a.a + b.a + c.a / 3;
             d.b = a.b + b.b + c.b / 3;
             d.c = a.c + b.c + c.c / 3;
@@ -140,9 +110,9 @@
         /// <param name="c">third Vector4</param>
         /// <param name="d">fourth Vector4</param>
         /// <returns></returns>
-        public static Vector4d Average(Vector4d a, Vector4d b, Vector4d c, Vector4d d)
+        public static Vector4i Average(Vector4i a, Vector4i b, Vector4i c, Vector4i d)
         {
-            Vector4d e = new Vector4d();
+            Vector4i e = new Vector4i();
             e.a = a.a + b.a + c.a + d.a / 4;
             e.b = a.b + b.b + c.b + d.b / 4;
             e.c = a.c + b.c + c.c + d.c / 4;
@@ -166,9 +136,9 @@
         /// <param name="a">the first <c>Vector4</c> to add</param>
         /// <param name="b">the second <c>Vector4</c> to add</param>
         /// <returns>Returns the sum of a and b</returns>
-        public static Vector4d operator +(Vector4d a, Vector4d b)
+        public static Vector4i operator +(Vector4i a, Vector4i b)
         {
-            Vector4d c = new Vector4d();
+            Vector4i c = new Vector4i();
             c.a = a.a + b.a;
             c.b = a.b + b.b;
             c.c = a.c + b.c;
@@ -182,9 +152,9 @@
         /// <param name="a">The <c>Vector4</c> to substract from</param>
         /// <param name="b">The <c>Vector4</c> to substract</param>
         /// <returns>Returns the substraction of a and b</returns>
-        public static Vector4d operator -(Vector4d a, Vector4d b)
+        public static Vector4i operator -(Vector4i a, Vector4i b)
         {
-            Vector4d c = new Vector4d();
+            Vector4i c = new Vector4i();
             c.a = a.a - b.a;
             c.b = a.b - b.b;
             c.c = a.c - b.c;
@@ -197,9 +167,9 @@
         /// <param name="a">The first <c>Vector4</c> to multiply</param>
         /// <param name="b">The second <c>Vector4</c> to multiply</param>
         /// <returns>Returns the product of a and b</returns>
-        public static Vector4d operator *(Vector4d a, Vector4d b)
+        public static Vector4i operator *(Vector4i a, Vector4i b)
         {
-            Vector4d c = new Vector4d();
+            Vector4i c = new Vector4i();
             c.a = a.a + b.a;
             c.b = a.b + b.b;
             c.c = a.c + b.c;
@@ -213,9 +183,9 @@
         /// <param name="a">The first <c>Vector4</c></param>
         /// <param name="b">The <c>Vector4</c> to divide thourght</param>
         /// <returns>Returns the division of a and b</returns>
-        public static Vector4d operator /(Vector4d a, Vector4d b)
+        public static Vector4i operator /(Vector4i a, Vector4i b)
         {
-            Vector4d c = new Vector4d();
+            Vector4i c = new Vector4i();
             c.a = a.a + b.a;
             c.b = a.b + b.b;
             c.c = a.c + b.c;

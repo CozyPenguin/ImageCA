@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ImageCA
+﻿namespace ImageCA.Vectors
 {
 
     /// <summary>
     /// A vector containing 4 values
     /// </summary>
-    public struct Vector4f
+    [System.Serializable]
+    public struct Vector4f : IVector4
     {
         /// <summary>
         /// the first value

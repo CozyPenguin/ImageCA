@@ -15,7 +15,7 @@ namespace ImageCA.Colors
         /// <returns></returns>
         public static ColorHSV ToHSV(ColorRGB inputColor)
         {
-            Logger.Log("Color processing RGB -> HSV started.", LogLevel.Info);
+            Logger.Log("Color conversion RGB -> HSV started.", LogLevel.Info);
 
             ColorHSV outputColor = new ColorHSV();
 
@@ -37,6 +37,8 @@ namespace ImageCA.Colors
             else outputColor.S = (max - min) / (1 - Math.Abs(max + min - 1));
 
             outputColor.V = max;
+
+            Logger.Log($"Color conversion finished. Output color is {outputColor}.", LogLevel.Info);
 
             return (outputColor);
         }
