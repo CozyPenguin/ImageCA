@@ -7,9 +7,9 @@ namespace ImageCA.Colors
     /// </summary>
     public struct ColorRGB
     {
-        private float r;
-        private float g;
-        private float b;
+        private double r;
+        private double g;
+        private double b;
 
         /// <summary>
         /// initialize a new ColorRGB with the given values
@@ -17,7 +17,7 @@ namespace ImageCA.Colors
         /// <param name="r">the red value ranging from 0 to 255</param>
         /// <param name="g">the green value ranging from 0 to 255</param>
         /// <param name="b">the blue value ranging from 0 to 255</param>
-        public ColorRGB(float r, float g, float b)
+        public ColorRGB(double r, double g, double b)
         {
             this.r = r;
             this.g = g;
@@ -27,7 +27,7 @@ namespace ImageCA.Colors
         /// <summary>
         /// The red value, between 0 and 255
         /// </summary>
-        public float R
+        public double R
         {
             get
             {
@@ -43,7 +43,7 @@ namespace ImageCA.Colors
         /// <summary>
         /// The green value, between 0 and 255
         /// </summary>
-        public float G
+        public double G
         {
             get
             {
@@ -59,7 +59,7 @@ namespace ImageCA.Colors
         /// <summary>
         /// The blue value, between 0 and 255
         /// </summary>
-        public float B
+        public double B
         {
             get
             {

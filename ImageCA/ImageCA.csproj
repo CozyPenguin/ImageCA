@@ -25,6 +25,7 @@
 - updated xml documentation
 - more and better log messages</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyOriginatorKeyFile>Key.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

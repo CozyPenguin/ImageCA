@@ -37,7 +37,7 @@
             A color in the RGB colorspace
             </summary>
         </member>
-        <member name="M:ImageCA.Colors.ColorRGB.#ctor(System.Single,System.Single,System.Single)">
+        <member name="M:ImageCA.Colors.ColorRGB.#ctor(System.Double,System.Double,System.Double)">
             <summary>
             initialize a new ColorRGB with the given values
             </summary>
@@ -69,8 +69,15 @@
             <summary>
             Convert a color to HSV
             </summary>
-            <param name="inputColor">The input color, an RGB color</param>
-            <returns></returns>
+            <param name="inputColor">The input color, a RGB color</param>
+            <returns>HSV color equivalent of the input color</returns>
+        </member>
+        <member name="M:ImageCA.Colors.ColConverter.ToRGB(ImageCA.Colors.ColorHSV)">
+            <summary>
+            Convert a color to RGB
+            </summary>
+            <param name="inputColor">The input color, a HSV color</param>
+            <returns>RGB color equivalent of the input color</returns>
         </member>
         <member name="T:ImageCA.Logging.FLogger">
             <summary>
