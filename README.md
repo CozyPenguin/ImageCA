@@ -1,10 +1,10 @@
 # ImageCA
 
-[![Build Status](https://travis-ci.com/CozyPenguin/ImageCA.svg?branch=master)](https://travis-ci.com/CozyPenguin/ImageCA)
+[![Build Status](https://travis-ci.com/CozyPenguin/ImageCA.svg?branch=master)](https://travis-ci.com/CozyPenguin/ImageCA) [![Nuget](https://img.shields.io/nuget/dt/ImageCA?color=d&label=Nuget)](https://www.nuget.org/packages/ImageCA)
 
 ## Introduction
 
-ImageCA is a work in progress library used to analyze image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<http://www.lab2venture.de/>).
+ImageCA is a work in progress library used to analyze image databases and processing colors. It was originally developed for a contribution to the German project Lab2Venture (<https://www.l2v-berlin.de/>).
 
 ## Installation
 
@@ -22,7 +22,7 @@ After we've finished the vectors, we will focus on prebuilt binaries and a nuget
 
 version | roadmap
 ------- | -------
-`version 0.3` | add CIELAB colorspace and all conversion algorithms
+`version 0.3` | add CIELUV and CIELAB colorspace and all conversion algorithms
 `version 0.4` | better image loading and processing, support for multiple images
 
 ## Credits
@@ -33,6 +33,7 @@ All contributors can be found in the [CONTRIBUTORS.md](CONTRIBUTORS.md).
 
 RGB to HSV conversion algorithm:
 
+- <https://en.wikipedia.org/wiki/HSL_and_HSV#From_RGB>
 - <https://www5.in.tum.de/lehre/vorlesungen/graphik/info/csc/COL_25.htm#topic24>
 
 ## License
