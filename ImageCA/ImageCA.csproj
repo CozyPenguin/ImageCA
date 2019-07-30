@@ -18,7 +18,7 @@
     <AssemblyVersion>0.2.0.0</AssemblyVersion>
     <FileVersion>0.2.0.0</FileVersion>
     <Win32Resource />
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <DelaySign>false</DelaySign>
     <PackageReleaseNotes>v0.2.0
 - added 2-,3- and 4-dimensional vectors
