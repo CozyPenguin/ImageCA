@@ -14,7 +14,7 @@ Currently there are no prebuilt binaries. If you want to build the project from 
 
 **the project is not finished yet, this part describes the project when it's finished!**
 
-ImageCA provides a way to analyse one or several images. It is capable of extracting a colour from one or several points in the image. These colours can be processed separately or be combined into a single color, e.g. to get the average color of a probe. The library also provides vectors and in the future, ImageCA will be capable of performing several render-oriented operations. Additionally there will be other colorspaces and better conversion support. 
+ImageCA provides a way to analyse one or several images. It is capable of extracting a colour from one or several points in the image. These colours can be processed separately or be combined into a single color, e.g. to get the average color of a probe. The library also provides vectors and in the future, ImageCA will be capable of performing several render-oriented operations. Additionally there will be other colorspaces and better conversion support.
 
 ## Roadmap
 
@@ -27,7 +27,7 @@ version | roadmap
 
 ## Credits
 
-All contributors can be found in the [CONTRIBUTORS.md](CONTRIBUTORS.md). 
+All contributors can be found in the [CONTRIBUTORS.md](CONTRIBUTORS.md).
 
 ## Resources
 
