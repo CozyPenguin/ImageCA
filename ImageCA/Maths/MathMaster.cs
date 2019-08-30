@@ -16,11 +16,13 @@ namespace ImageCA.Maths
         public void AppendEquation(string equation) => equations.Add(equation);
         
         /// <summary>
-        /// compute the lists of equations
+        /// compute an equation from the list
         /// </summary>
-        public void Compute()
+        public void Compute(int index)
         {
             
         }
+
+
     }
 }
