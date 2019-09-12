@@ -5,8 +5,8 @@ namespace ImageCA.Colors
     /// <summary>
     /// A color in the RGB colorspace
     /// </summary>
-    [System.Serializable]
-    public struct ColorRGB
+    [Serializable]
+    public struct ColorRGB : IColor
     {
         private double r;
         private double g;

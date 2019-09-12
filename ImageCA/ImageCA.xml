@@ -4,6 +4,26 @@
         <name>ImageCA</name>
     </assembly>
     <members>
+        <member name="T:ImageCA.Colors.ColorCIELAB">
+            <summary>
+            A color in the CIELAB colorspace
+            </summary>
+        </member>
+        <member name="M:ImageCA.Colors.ColorCIELAB.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Instatiates a new <c>ColorCIELAB</c> with the given values
+            </summary>
+        </member>
+        <member name="T:ImageCA.Colors.ColorCIEXYZ">
+            <summary>
+            A color in the CIEXYZ colorspace
+            </summary>
+        </member>
+        <member name="M:ImageCA.Colors.ColorCIEXYZ.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Instatiates a new <c>ColorCIEXYZ</c> with the given values
+            </summary>
+        </member>
         <member name="T:ImageCA.Colors.ColorHSV">
             <summary>
             A color in the HSV colorspace
@@ -135,6 +155,22 @@
             Close the log properly
             </summary>
             <param name="CloseReason">why the logger is being stopped</param>
+        </member>
+        <member name="T:ImageCA.Maths.MathMaster">
+            <summary>
+            Master class to manage all math inputs
+            </summary>
+        </member>
+        <member name="M:ImageCA.Maths.MathMaster.AppendEquation(System.String)">
+            <summary>
+            Appens an equation to the equations list
+            </summary>
+            <param name="equation">the equation to add</param>
+        </member>
+        <member name="M:ImageCA.Maths.MathMaster.Compute(System.Int32)">
+            <summary>
+            compute an equation from the list
+            </summary>
         </member>
         <member name="T:ImageCA.Vectors.IVector">
             <summary>
