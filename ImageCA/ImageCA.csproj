@@ -30,7 +30,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>.\ImageCA.xml</DocumentationFile>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DefineConstants>TRACE;DEBUG;</DefineConstants>
