@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace ImageCA.Colors {
     /// <summary>
     /// Convert colors from one colorspace to another
@@ -11,9 +10,8 @@ namespace ImageCA.Colors {
         /// </summary>
         /// <param name="inputColor">The input color, a RGB color</param>
         /// <returns>HSV color equivalent of the input color</returns>
-        [Obsolete ("Method is deprecated, please use the method provided by the color class (IColor.ToRGB())")]
         public static ColorHSV ToHSV (ColorRGB inputColor) {
-            Debug.Log ("Color conversion RGB -> HSV started.", LogLevel.Info);
+            Debug.Log ("Color conversion RGB -> HSV started.", LogLevel.Debug);
 
             ColorHSV outputColor = new ColorHSV ();
 
@@ -32,7 +30,7 @@ namespace ImageCA.Colors {
             if (outputColor.S == 0) {
                 outputColor.H = 0;
 
-                Debug.Log ($"Color conversion RGB -> HSV finished. Output color is {outputColor}.", LogLevel.Info);
+                Debug.Log ($"Color conversion RGB -> HSV finished. Output color is {outputColor}.", LogLevel.Debug);
                 return outputColor;
             }
 
@@ -46,7 +44,7 @@ namespace ImageCA.Colors {
 
             if (outputColor.H < 0.0) outputColor.H += 360;
 
-            Debug.Log ($"Color conversion RGB -> HSV finished. Output color is {outputColor}.", LogLevel.Info);
+            Debug.Log ($"Color conversion RGB -> HSV finished. Output color is {outputColor}.", LogLevel.Debug);
 
             return outputColor;
         }
@@ -56,9 +54,8 @@ namespace ImageCA.Colors {
         /// </summary>
         /// <param name="inputColor">The input color, a HSV color</param>
         /// <returns>RGB color equivalent of the input color</returns>
-        [Obsolete ("Method is deprecated, please use the method provided by the color class (IColor.ToRGB())")]
         public static ColorRGB ToRGB (ColorHSV inputColor) {
-            Debug.Log ("Color conversion HSV -> RGB started.", LogLevel.Info);
+            Debug.Log ("Color conversion HSV -> RGB started.", LogLevel.Debug);
 
             ColorRGB outputColor = new ColorRGB ();
 
@@ -106,7 +103,7 @@ namespace ImageCA.Colors {
                     throw new InvalidOperationException ("This behaviour is not intended. Please report this as a bug on https://github.com/CozyPenguin/ImageCA/issues. HSV -> RGB");
             }
 
-            Debug.Log ($"Color conversion HSV -> RGB finished. Output color is {outputColor}.", LogLevel.Info);
+            Debug.Log ($"Color conversion HSV -> RGB finished. Output color is {outputColor}.", LogLevel.Debug);
 
             return outputColor;
         }

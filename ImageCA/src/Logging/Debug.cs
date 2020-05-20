@@ -10,10 +10,6 @@ namespace ImageCA {
     /// </remarks>
     public enum LogLevel : byte {
         /// <summary>
-        /// Info Level
-        /// </summary>
-        Info,
-        /// <summary>
         /// Debug Level
         /// </summary>
         Debug,
@@ -28,9 +24,9 @@ namespace ImageCA {
     }
 
     /// <summary>
-    /// logs log messages to %APP-DATA%/Roaming/ImageCA/logs
+    /// logs debug messages to the Console
     /// </summary>
-    public static class Debug {
+    internal static class Debug {
 
         /// <summary>
         /// log a single string
@@ -42,9 +38,6 @@ namespace ImageCA {
             switch (logLevel) {
                 case LogLevel.Debug:
                     Console.Write ("[Debug] ");
-                    break;
-                case LogLevel.Info:
-                    Console.Write ("[Info] ");
                     break;
                 case LogLevel.Warn:
                     Console.Write ("[Warn] ");
@@ -62,20 +55,8 @@ namespace ImageCA {
         /// <param name="logText">the string array to log</param>
         /// <param name="logLevel">log level</param>
         public static void Log (string[] logText, LogLevel logLevel) {
-            Console.Write ("[" + DateTime.Now.ToLongTimeString () + "] ");
             foreach (string textPart in logText) {
-                switch (logLevel) {
-                    case LogLevel.Debug:
-                        Console.Write ("[Debug] ");
-                        break;
-                    case LogLevel.Warn:
-                        Console.Write ("[Warn] ");
-                        break;
-                    case LogLevel.Error:
-                        Console.Write ("[Error] ");
-                        break;
-                }
-                Console.WriteLine (textPart);
+                Log (textPart, logLevel);
             }
         }
     }

@@ -99,62 +99,47 @@
             <param name="inputColor">The input color, a HSV color</param>
             <returns>RGB color equivalent of the input color</returns>
         </member>
-        <member name="T:ImageCA.Logging.FLogger">
+        <member name="T:ImageCA.LogLevel">
             <summary>
-            The <c>Logger</c> class writes logs
-            to the AppData/ApplicationName/logs folder
+            The different logging levels
+            </summary>
+            <remarks>
+            Logging levels are: Debug, Warn, Error
+            </remarks>
+        </member>
+        <member name="F:ImageCA.LogLevel.Debug">
+            <summary>
+            Debug Level
             </summary>
         </member>
-        <member name="P:ImageCA.Logging.FLogger.LogPath">
-            <value>Gets the filepath of the log</value>
-        </member>
-        <member name="M:ImageCA.Logging.FLogger.#ctor(System.String)">
-            <param name="applicationName">the name of the application, currently used to choose AppData folder</param>
-        </member>
-        <member name="M:ImageCA.Logging.FLogger.Log(System.String,LogLevel)">
+        <member name="F:ImageCA.LogLevel.Warn">
             <summary>
-            Logs on line of text at three different LogLevels
-            </summary>
-            <param name="logText">The string that gets logged</param>
-            <param name="logLevel">Debug, Warn, Error</param>
-        </member>
-        <member name="M:ImageCA.Logging.FLogger.Log(System.String[],LogLevel)">
-            <summary>
-            Logs multiple lines of text at three different LogLevels
-            </summary>
-            <param name="logText">the strings that get logged</param>
-            <param name="logLevel">Debug, Warn, Error</param>
-        </member>
-        <member name="M:ImageCA.Logging.FLogger.EndLog(System.String)">
-            <summary>
-            Stops the Logger and writes down time and closing reason
-            </summary>
-            <param name="CloseReason">The reason the logger closes.</param>
-        </member>
-        <member name="T:ImageCA.Logging.Logger">
-            <summary>
-            logs log messages to the folder %APP-DATA%/Roaming/ImageCA/logs
+            Warn Level
             </summary>
         </member>
-        <member name="M:ImageCA.Logging.Logger.Log(System.String,LogLevel)">
+        <member name="F:ImageCA.LogLevel.Error">
+            <summary>
+            Error Level
+            </summary>
+        </member>
+        <member name="T:ImageCA.Debug">
+            <summary>
+            logs debug messages to the Console
+            </summary>
+        </member>
+        <member name="M:ImageCA.Debug.Log(System.String,ImageCA.LogLevel)">
             <summary>
             log a single string
             </summary>
             <param name="logText">the string to log</param>
             <param name="logLevel">log level</param>
         </member>
-        <member name="M:ImageCA.Logging.Logger.Log(System.String[],LogLevel)">
+        <member name="M:ImageCA.Debug.Log(System.String[],ImageCA.LogLevel)">
             <summary>
             log a string array
             </summary>
             <param name="logText">the string array to log</param>
             <param name="logLevel">log level</param>
-        </member>
-        <member name="M:ImageCA.Logging.Logger.EndLog(System.String)">
-            <summary>
-            Close the log properly
-            </summary>
-            <param name="CloseReason">why the logger is being stopped</param>
         </member>
         <member name="T:ImageCA.Maths.MathMaster">
             <summary>
@@ -1340,34 +1325,6 @@
             <param name="a">The first <c>Vector4</c></param>
             <param name="b">The <c>Vector4</c> to divide thourght</param>
             <returns>Returns the division of a and b</returns>
-        </member>
-        <member name="T:LogLevel">
-            <summary>
-            The different logging levels
-            </summary>
-            <remarks>
-            Logging levels are: Debug, Warn, Error
-            </remarks>
-        </member>
-        <member name="F:LogLevel.Info">
-            <summary>
-            Info Level
-            </summary>
-        </member>
-        <member name="F:LogLevel.Debug">
-            <summary>
-            Debug Level
-            </summary>
-        </member>
-        <member name="F:LogLevel.Warn">
-            <summary>
-            Warn Level
-            </summary>
-        </member>
-        <member name="F:LogLevel.Error">
-            <summary>
-            Error Level
-            </summary>
         </member>
     </members>
 </doc>
