@@ -67,17 +67,17 @@
         </member>
         <member name="P:ImageCA.Colors.ColorRGB.R">
             <summary>
-            The red value, between 0 and 255
+            The red value, ranging from 0-255
             </summary>
         </member>
         <member name="P:ImageCA.Colors.ColorRGB.G">
             <summary>
-            The green value, between 0 and 255
+            The green value, ranging from 0-255
             </summary>
         </member>
         <member name="P:ImageCA.Colors.ColorRGB.B">
             <summary>
-            The blue value, between 0 and 255
+            The blue value, ranging from 0-255
             </summary>
         </member>
         <member name="T:ImageCA.Colors.ColConverter">

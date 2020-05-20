@@ -1,56 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-/// <summary>
-/// The different logging levels
-/// </summary>
-/// <remarks>
-/// Logging levels are: Debug, Warn, Error
-/// </remarks>
-public enum LogLevel : byte
-{
-    /// <summary>
-    /// Info Level
-    /// </summary>
-    Info,
-    /// <summary>
-    /// Debug Level
-    /// </summary>
-    Debug,
-    /// <summary>
-    /// Warn Level
-    /// </summary>
-    Warn,
-    /// <summary>
-    /// Error Level
-    /// </summary>
-    Error
-}
+namespace ImageCA {
 
-
-namespace ImageCA.Logging
-{
     /// <summary>
-    /// logs log messages to the folder %APP-DATA%/Roaming/ImageCA/logs
+    /// The different logging levels
     /// </summary>
-    public static class Logger
-    {
-        private static FLogger fLogger;
+    /// <remarks>
+    /// Logging levels are: Debug, Warn, Error
+    /// </remarks>
+    public enum LogLevel : byte {
+        /// <summary>
+        /// Info Level
+        /// </summary>
+        Info,
+        /// <summary>
+        /// Debug Level
+        /// </summary>
+        Debug,
+        /// <summary>
+        /// Warn Level
+        /// </summary>
+        Warn,
+        /// <summary>
+        /// Error Level
+        /// </summary>
+        Error
+    }
 
-        static Logger()
-        {
-            fLogger = new FLogger(System.Reflection.Assembly.GetExecutingAssembly().GetName().Name);
-        }
+    /// <summary>
+    /// logs log messages to %APP-DATA%/Roaming/ImageCA/logs
+    /// </summary>
+    public static class Debug {
 
         /// <summary>
         /// log a single string
         /// </summary>
         /// <param name="logText">the string to log</param>
         /// <param name="logLevel">log level</param>
-        public static void Log(string logText, LogLevel logLevel)
-        {
-            fLogger.Log(logText, logLevel);
+        public static void Log (string logText, LogLevel logLevel) {
+            Console.Write ("[" + DateTime.Now.ToLongTimeString () + "] ");
+            switch (logLevel) {
+                case LogLevel.Debug:
+                    Console.Write ("[Debug] ");
+                    break;
+                case LogLevel.Info:
+                    Console.Write ("[Info] ");
+                    break;
+                case LogLevel.Warn:
+                    Console.Write ("[Warn] ");
+                    break;
+                case LogLevel.Error:
+                    Console.Write ("[Error] ");
+                    break;
+            }
+            Console.WriteLine (logText);
         }
 
         /// <summary>
@@ -58,18 +61,22 @@ namespace ImageCA.Logging
         /// </summary>
         /// <param name="logText">the string array to log</param>
         /// <param name="logLevel">log level</param>
-        public static void Log(string[] logText, LogLevel logLevel)
-        {
-            fLogger.Log(logText, logLevel);
-        }
-
-        /// <summary>
-        /// Close the log properly
-        /// </summary>
-        /// <param name="CloseReason">why the logger is being stopped</param>
-        public static void EndLog(string CloseReason)
-        {
-            fLogger.EndLog(CloseReason);
+        public static void Log (string[] logText, LogLevel logLevel) {
+            Console.Write ("[" + DateTime.Now.ToLongTimeString () + "] ");
+            foreach (string textPart in logText) {
+                switch (logLevel) {
+                    case LogLevel.Debug:
+                        Console.Write ("[Debug] ");
+                        break;
+                    case LogLevel.Warn:
+                        Console.Write ("[Warn] ");
+                        break;
+                    case LogLevel.Error:
+                        Console.Write ("[Error] ");
+                        break;
+                }
+                Console.WriteLine (textPart);
+            }
         }
     }
 }

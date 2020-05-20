@@ -1,13 +1,11 @@
 ﻿using System;
 
-namespace ImageCA.Colors
-{
+namespace ImageCA.Colors {
     /// <summary>
     /// A color in the RGB colorspace
     /// </summary>
     [Serializable]
-    public struct ColorRGB : IColor
-    {
+    public struct ColorRGB : IColor {
         private double r;
         private double g;
         private double b;
@@ -18,58 +16,48 @@ namespace ImageCA.Colors
         /// <param name="r">the red value ranging from 0 to 255</param>
         /// <param name="g">the green value ranging from 0 to 255</param>
         /// <param name="b">the blue value ranging from 0 to 255</param>
-        public ColorRGB(double r, double g, double b)
-        {
+        public ColorRGB (double r, double g, double b) {
             this.r = r;
             this.g = g;
             this.b = b;
         }
 
         /// <summary>
-        /// The red value, between 0 and 255
+        /// The red value, ranging from 0-255
         /// </summary>
-        public double R
-        {
-            get
-            {
+        public double R {
+            get {
                 return (r);
             }
-            set
-            {
+            set {
                 if (value >= 0 && value <= 255) r = value;
-                else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
+                else throw new ArgumentOutOfRangeException ($"{nameof(value)} must be between 0 and 255");
             }
         }
 
         /// <summary>
-        /// The green value, between 0 and 255
+        /// The green value, ranging from 0-255
         /// </summary>
-        public double G
-        {
-            get
-            {
+        public double G {
+            get {
                 return (g);
             }
-            set
-            {
+            set {
                 if (value >= 0 && value <= 255) g = value;
-                else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
+                else throw new ArgumentOutOfRangeException ($"{nameof(value)} must be between 0 255");
             }
         }
 
         /// <summary>
-        /// The blue value, between 0 and 255
+        /// The blue value, ranging from 0-255
         /// </summary>
-        public double B
-        {
-            get
-            {
+        public double B {
+            get {
                 return (b);
             }
-            set
-            {
+            set {
                 if (value >= 0 && value <= 255) b = value;
-                else throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 255");
+                else throw new ArgumentOutOfRangeException ($"{nameof(value)} must be between 0 255");
             }
         }
     }

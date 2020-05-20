@@ -1,6 +1,5 @@
-﻿namespace ImageCA.Colors
-{
-    interface IColor
-    {
+﻿namespace ImageCA.Colors {
+    public interface IColor {
+        public ColorRGB ToRGB ();
     }
 }

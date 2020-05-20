@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCA", "ImageCA\ImageCA.csproj", "{48D5D9E6-5E32-4341-88BE-B43FBC55F21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "ImageCATests\Tests.csproj", "{72FC0378-8158-4AB4-B491-6F77CCA6A1B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{72FC0378-8158-4AB4-B491-6F77CCA6A1B7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{48D5D9E6-5E32-4341-88BE-B43FBC55F21F} = {48D5D9E6-5E32-4341-88BE-B43FBC55F21F}
 	EndProjectSection

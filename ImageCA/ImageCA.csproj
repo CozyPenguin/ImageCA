@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <ApplicationIcon></ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -11,8 +11,8 @@
     <Company />
     <Version>0.2.0</Version>
     <RepositoryUrl>https://github.com/CozyPenguin/ImageCA</RepositoryUrl>
-    <PackageTags>image,image-analysis,c-sharp,colors</PackageTags>
-    <Description>ImageCA provides a way of analysing images and especially colors</Description>
+    <PackageTags>image,image-analysis,c-sharp,colour,color,colour-conversion</PackageTags>
+    <Description>ImageCA provides a way of analysing images and colours</Description>
     <PackageId>ImageCA</PackageId>
     <Product>ImageCA</Product>
     <AssemblyVersion>0.2.0.0</AssemblyVersion>
@@ -38,6 +38,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>.\ImageCA.xml</DocumentationFile>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

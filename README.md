@@ -18,12 +18,12 @@ ImageCA provides a way to analyse one or several images. It is capable of extrac
 
 ## Roadmap
 
-After we've finished the vectors, we will focus on prebuilt binaries and a nuget package. Our roadmap is:
+After we've finished the vectors, we will focus on prebuilt binaries and a nuget package. Our roadmap:
 
-version | roadmap
-------- | -------
-`version 0.3` | add CIELUV and CIELAB colorspace and all conversion algorithms
-`version 0.4` | better image loading and processing, support for multiple images
+| Version       | Features                                                         |
+| ------------- | ---------------------------------------------------------------- |
+| `version 0.3` | add CIELUV and CIELAB colorspace and all conversion algorithms   |
+| `version 0.4` | better image loading and processing, support for multiple images |
 
 ## Credits
 
